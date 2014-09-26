@@ -11,7 +11,7 @@
 fibonacci:
 	@ ADD/MODIFY CODE BELOW
 	@ PROLOG
-	push {r3, r4, r5, r6, lr}
+	push {lr}
 
         mov r3, #-1
         @ previous = -1
@@ -40,7 +40,7 @@ loop:
         mov r0, r5
         @ copy r5(sum) to r0 as return value
 
-	pop {r3,r4, r5, r6, pc}		@EPILOG
+	pop {pc}		@EPILOG
 
 	@ END CODE MODIFICATION
 
